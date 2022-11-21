@@ -14,6 +14,7 @@ public class Airborne extends Vehicle{
         this.wingCondition = wingCondition;
     }
 
+    // METHODS
     public boolean isWingRepairRequired(){
         if (wingCondition <= 70) {
             return true;
@@ -27,6 +28,7 @@ public class Airborne extends Vehicle{
         }
     }
 
+    // GETTER & SETTER
     public int getWingCondition(){
         return this.wingCondition;
     }

@@ -10,7 +10,7 @@ public class ExhibitionTest {
 
     private Terrestrial nissanSilvia;
     private Airborne boeing747;
-    private Seafaring princessX80;
+    private Watercraft princessX80;
     private Exhibition exhibition;
 
     @BeforeEach
@@ -34,7 +34,7 @@ public class ExhibitionTest {
                 11000,
                 3,
                 100);
-        princessX80 = new Seafaring(0,
+        princessX80 = new Watercraft(0,
                 8,
                 35,
                 "Princess",
@@ -42,7 +42,8 @@ public class ExhibitionTest {
                 FuelType.DIESEL,
                 TransportType. TRAVEL,
                 false,
-                1);
+                1,
+                15);
         exhibition = new Exhibition("Vehicle Exhibition");
     }
 
