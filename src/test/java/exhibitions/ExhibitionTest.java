@@ -32,7 +32,8 @@ public class ExhibitionTest {
                 FuelType.PETROL,
                 TransportType.TRAVEL,
                 11000,
-                3);
+                3,
+                100);
         princessX80 = new Seafaring(0,
                 8,
                 35,
