@@ -43,7 +43,8 @@ public class ExhibitionTest {
                 TransportType. TRAVEL,
                 false,
                 1,
-                15);
+                15,
+                0);
         exhibition = new Exhibition("Vehicle Exhibition");
     }
 

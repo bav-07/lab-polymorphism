@@ -9,7 +9,6 @@ public abstract class Vehicle {
     protected String model;
     protected FuelType fuelType;
     protected TransportType transportType;
-    protected boolean broken;
 
     public Vehicle(int numberOfWheels, int maximumOccupancy, double topSpeed, String make, String model, FuelType fuelType, TransportType transportType){
         this.numberOfWheels = numberOfWheels;
@@ -19,7 +18,8 @@ public abstract class Vehicle {
         this.model = model;
         this.fuelType = fuelType;
         this.transportType = transportType;
-        this.broken = false;
     }
+
+    
 
 }

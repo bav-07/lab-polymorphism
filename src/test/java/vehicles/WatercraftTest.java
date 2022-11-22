@@ -20,7 +20,8 @@ public class WatercraftTest {
                 TransportType. TRAVEL,
                 false,
                 1,
-                15);
+                15,
+                0);
     }
 
     @Test
