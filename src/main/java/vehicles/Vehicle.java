@@ -20,6 +20,6 @@ public abstract class Vehicle {
         this.transportType = transportType;
     }
 
-    
+    public abstract String description();
 
 }

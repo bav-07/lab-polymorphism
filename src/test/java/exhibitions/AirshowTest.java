@@ -30,7 +30,7 @@ public class AirshowTest {
     }
 
     @Test
-    public void canAddVehicles(){
+    public void canAddAircraft(){
         airshow.addAircraft(boeing747);
         assertThat(airshow.countVehicles()).isEqualTo(1);
         airshow.addAircraft(boeing747);

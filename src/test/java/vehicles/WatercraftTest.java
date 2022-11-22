@@ -39,6 +39,12 @@ public class WatercraftTest {
     }
 
     @Test
+    public void canProvideDescription(){
+        assertThat(princessX80.description()).isEqualTo("The Princess X80.It is a marine vehicle. It can carry a maximum of 8 passengers.");
+        assertThat(w_subMK3.description()).isEqualTo("The W-Submarine MK3. It is a marine vehicle that can travel underwater at a depth of -60m. It can carry a maximum of 50 passengers.");
+    }
+
+    @Test
     public void canReplenishSafetyFlareCapacity(){
         princessX80.setSafetyFlareCapacity(1);
         princessX80.replenishSafetyFlareCapacity();

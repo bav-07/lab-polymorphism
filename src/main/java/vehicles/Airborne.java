@@ -19,6 +19,12 @@ public class Airborne extends Vehicle implements ITakeOff {
     }
 
     // METHODS
+    public String description(){
+        String ignoreCaseTransportType = transportType.toString().toLowerCase();
+        String description = String.format("This is the %s %s, with a maximum flight altitude of %dm, primarily used for %s.", make, model,maxFlightAltitude,ignoreCaseTransportType);
+        return description;
+    }
+
     public boolean isWingRepairRequired(){
         if (wingCondition <= 70) {
             return true;

@@ -25,6 +25,11 @@ public class AirborneTest {
     }
 
     @Test
+    public void canProvideDescription(){
+        assertThat(boeing747.description()).isEqualTo("This is the Boeing 747, with a maximum flight altitude of 11000m, primarily used for travel.");
+    }
+
+    @Test
     public void canCheckIfWingRepairIsRequired(){
         assertThat(boeing747.isWingRepairRequired()).isEqualTo(true);
         boeing747.setWingCondition(100);

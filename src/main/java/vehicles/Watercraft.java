@@ -18,6 +18,19 @@ public class Watercraft extends Vehicle {
     }
 
     //METHODS
+    public String description(){
+        String firstSentence = String.format("The %s %s.",make,model);
+        String secondSentence;
+        if (underwaterTravel){
+            secondSentence = String.format(" It is a marine vehicle that can travel underwater at a depth of %dm.", maxOperatingDepth);
+        }
+        else {
+            secondSentence = "It is a marine vehicle.";
+        }
+        String thirdSentence = String.format(" It can carry a maximum of %d passengers.",maximumOccupancy);
+        return firstSentence + secondSentence + thirdSentence;
+    }
+
     public void replenishSafetyFlareCapacity(){
         if (safetyFlareCapacity < 6){
             safetyFlareCapacity = 15;

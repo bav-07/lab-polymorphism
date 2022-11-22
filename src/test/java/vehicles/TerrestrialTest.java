@@ -52,6 +52,14 @@ public class TerrestrialTest {
     }
 
     @Test
+    public void canProvideDescription(){
+        assertThat(nissanSilvia.description()).isEqualTo("This is the Nissan Silvia, a car running on petrol, with a top speed of 150mph.");
+        assertThat(mackPinnacle.description()).isEqualTo("This is the Mack Pinnacle, a heavy vehicle running on diesel, with a top speed of 90mph.");
+        assertThat(fordTransit.description()).isEqualTo("This is the Ford Transit, a van running on diesel, with a top speed of 100mph.");
+        assertThat(ducati750GT.description()).isEqualTo("This is the Ducati 750GT, a motorcycle running on petrol, with a top speed of 125mph.");
+    }
+
+    @Test
     public void canCheckRoadLegality(){
         assertThat(nissanSilvia.checkRoadLegality()).isEqualTo("Vehicle is road legal");
         assertThat(fordTransit.checkRoadLegality()).isEqualTo("Vehicle is not road legal");
