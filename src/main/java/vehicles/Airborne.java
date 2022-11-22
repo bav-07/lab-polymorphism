@@ -2,7 +2,7 @@ package vehicles;
 
 import interfaces.Drivable;
 
-public class Airborne extends Vehicle implements Drivable {
+public class Airborne extends Vehicle {
 
     private int currentFlightAltitude;
     private int cabinCrewSize;

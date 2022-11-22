@@ -5,13 +5,15 @@ public class Watercraft extends Vehicle {
     private boolean underwaterTravel;
     private int numberOfStores;
     private int safetyFlareCapacity;
+    private int maxOperatingDepth;
     private int currentDepth;
 
-    public Watercraft(int numberOfWheels, int maximumOccupancy, double topSpeed, String make, String model, FuelType fuelType, TransportType transportType, boolean underwaterTravel, int numberOfStores, int safetyFlareCapacity, int currentDepth){
+    public Watercraft(int numberOfWheels, int maximumOccupancy, double topSpeed, String make, String model, FuelType fuelType, TransportType transportType, boolean underwaterTravel, int numberOfStores, int safetyFlareCapacity, int maxOperatingDepth, int currentDepth){
         super(numberOfWheels, maximumOccupancy, topSpeed, make, model, fuelType, transportType);
         this.underwaterTravel = underwaterTravel;
         this.numberOfStores = numberOfStores;
         this.safetyFlareCapacity = safetyFlareCapacity;
+        this.maxOperatingDepth = maxOperatingDepth;
         this.currentDepth = currentDepth;
     }
 
@@ -24,13 +26,13 @@ public class Watercraft extends Vehicle {
 
     public void diveUnderwater(){
         if ((underwaterTravel) && (currentDepth >= 0)){
-            currentDepth = -1000;
+            currentDepth = maxOperatingDepth;
         }
     }
 
     // OVERLOAD (diveUnderwater with argument to allow dive to a desired depth)
     public void diveUnderwater(int desiredDepth){
-        if ((underwaterTravel) && (currentDepth > desiredDepth)){
+        if ((underwaterTravel) && (currentDepth > desiredDepth) && (desiredDepth >= maxOperatingDepth)){
             currentDepth = desiredDepth;
         }
     }

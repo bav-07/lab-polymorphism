@@ -44,6 +44,7 @@ public class ExhibitionTest {
                 false,
                 1,
                 15,
+                0,
                 0);
         exhibition = new Exhibition("Vehicle Exhibition");
     }
