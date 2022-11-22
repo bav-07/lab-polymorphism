@@ -1,5 +1,7 @@
 package vehicles;
 
+import enumerations.FuelType;
+import enumerations.TransportType;
 import interfaces.ITakeOff;
 
 public class Airborne extends Vehicle implements ITakeOff {

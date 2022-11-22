@@ -1,5 +1,9 @@
 package vehicles;
 
+import enumerations.FuelType;
+import enumerations.GroundVehicleType;
+import enumerations.TransportType;
+
 public class Terrestrial extends Vehicle{
 
     private GroundVehicleType groundVehicleType;

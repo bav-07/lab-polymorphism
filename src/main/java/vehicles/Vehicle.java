@@ -1,5 +1,8 @@
 package vehicles;
 
+import enumerations.FuelType;
+import enumerations.TransportType;
+
 public abstract class Vehicle {
 
     protected int numberOfWheels;

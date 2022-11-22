@@ -1,5 +1,7 @@
 package exhibitions;
 
+import enumerations.FuelType;
+import enumerations.TransportType;
 import interfaces.ITakeOff;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;

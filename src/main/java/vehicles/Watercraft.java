@@ -1,5 +1,8 @@
 package vehicles;
 
+import enumerations.FuelType;
+import enumerations.TransportType;
+
 public class Watercraft extends Vehicle {
 
     private boolean underwaterTravel;

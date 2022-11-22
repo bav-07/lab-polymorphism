@@ -1,5 +1,7 @@
 package vehicles;
 
+import enumerations.FuelType;
+import enumerations.TransportType;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 

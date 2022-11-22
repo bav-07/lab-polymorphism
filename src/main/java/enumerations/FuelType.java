@@ -1,4 +1,4 @@
-package vehicles;
+package enumerations;
 
 public enum FuelType {
 
