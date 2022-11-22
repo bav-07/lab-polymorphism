@@ -34,7 +34,7 @@ public class Watercraft extends Vehicle {
             currentDepth = desiredDepth;
         }
     }
-    
+
     public void riseTowardsSurface(){
         if (currentDepth < 0){
             currentDepth = 0;
@@ -48,6 +48,7 @@ public class Watercraft extends Vehicle {
         }
     }
 
+    // GETTERS & SETTERS
     public int getSafetyFlareCapacity(){
         return this.safetyFlareCapacity;
     }
@@ -56,4 +57,11 @@ public class Watercraft extends Vehicle {
         this.safetyFlareCapacity = safetyFlareCapacity;
     }
 
+    public int getCurrentDepth(){
+        return this.currentDepth;
+    }
+
+    public void setCurrentDepth(int desiredDepth){
+        this.currentDepth = desiredDepth;
+    }
 }

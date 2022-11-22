@@ -1,15 +1,17 @@
 package vehicles;
 
-public class Airborne extends Vehicle{
+import interfaces.Drivable;
 
-    private int flightAltitude;
+public class Airborne extends Vehicle implements Drivable {
+
+    private int currentFlightAltitude;
     private int cabinCrewSize;
     private int wingCondition;
 
 
-    public Airborne(int numberOfWheels, int maximumOccupancy, double topSpeed, String make, String model, FuelType fuelType, TransportType transportType, int flightAltitude, int cabinCrewSize, int wingCondition){
+    public Airborne(int numberOfWheels, int maximumOccupancy, double topSpeed, String make, String model, FuelType fuelType, TransportType transportType, int currentFlightAltitude, int cabinCrewSize, int wingCondition){
         super(numberOfWheels, maximumOccupancy, topSpeed, make, model, fuelType, transportType);
-        this.flightAltitude = flightAltitude;
+        this.currentFlightAltitude = currentFlightAltitude;
         this.cabinCrewSize = cabinCrewSize;
         this.wingCondition = wingCondition;
     }
