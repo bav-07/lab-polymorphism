@@ -1,17 +1,19 @@
 package vehicles;
 
-import interfaces.Drivable;
+import interfaces.ITakeOff;
 
-public class Airborne extends Vehicle {
+public class Airborne extends Vehicle implements ITakeOff {
 
     private int currentFlightAltitude;
+    private int maxFlightAltitude;
     private int cabinCrewSize;
     private int wingCondition;
 
 
-    public Airborne(int numberOfWheels, int maximumOccupancy, double topSpeed, String make, String model, FuelType fuelType, TransportType transportType, int currentFlightAltitude, int cabinCrewSize, int wingCondition){
+    public Airborne(int numberOfWheels, int maximumOccupancy, double topSpeed, String make, String model, FuelType fuelType, TransportType transportType, int currentFlightAltitude, int maxFlightAltitude, int cabinCrewSize, int wingCondition){
         super(numberOfWheels, maximumOccupancy, topSpeed, make, model, fuelType, transportType);
         this.currentFlightAltitude = currentFlightAltitude;
+        this.maxFlightAltitude = maxFlightAltitude;
         this.cabinCrewSize = cabinCrewSize;
         this.wingCondition = wingCondition;
     }
@@ -28,6 +30,23 @@ public class Airborne extends Vehicle {
         if (isWingRepairRequired()) {
             wingCondition = 100;
         }
+    }
+
+    // Methods from interface ITakeOff
+    public String takeOff(){
+        if (currentFlightAltitude == 0){
+            currentFlightAltitude = maxFlightAltitude;
+            return "Taking off";
+        }
+        return "Currently in flight";
+    }
+
+    public String land(){
+        if (currentFlightAltitude > 0){
+            currentFlightAltitude = 0;
+            return "Landing procedure complete; flight ended";
+        }
+        return "Not in flight";
     }
 
     // GETTER & SETTER

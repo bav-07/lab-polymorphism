@@ -31,6 +31,7 @@ public class ExhibitionTest {
                 "747",
                 FuelType.PETROL,
                 TransportType.TRAVEL,
+                0,
                 11000,
                 3,
                 100);
