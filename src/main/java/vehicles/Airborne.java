@@ -49,7 +49,7 @@ public class Airborne extends Vehicle implements ITakeOff {
         return "Not in flight";
     }
 
-    // GETTER & SETTER
+    // GETTERS & SETTERS
     public int getWingCondition(){
         return this.wingCondition;
     }
@@ -57,4 +57,22 @@ public class Airborne extends Vehicle implements ITakeOff {
         this.wingCondition = wingCondition;
     }
 
+    public int getCurrentFlightAltitude(){
+        return this.currentFlightAltitude;
+    }
+    public void setCurrentFlightAltitude(int currentFlightAltitude){
+        if (currentFlightAltitude <= maxFlightAltitude) {
+            this.currentFlightAltitude = currentFlightAltitude;
+        }
+        else {
+            this.currentFlightAltitude = maxFlightAltitude;
+        }
+    }
+
+    public int getMaxFlightAltitude(){
+        return this.maxFlightAltitude;
+    }
+    public void setMaxFlightAltitude(int maxFlightAltitude){
+        this.maxFlightAltitude = maxFlightAltitude;
+    }
 }

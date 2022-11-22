@@ -38,4 +38,32 @@ public class AirborneTest {
         assertThat(boeing747.getWingCondition()).isEqualTo(100);
     }
 
+    // Testing interface methods
+    @Test
+    public void canTakeOff(){
+        assertThat(boeing747.takeOff()).isEqualTo("Taking off");
+        assertThat(boeing747.getCurrentFlightAltitude()).isEqualTo(boeing747.getMaxFlightAltitude());
+        assertThat(boeing747.takeOff()).isEqualTo("Currently in flight");
+    }
+
+    @Test
+    public void canLand(){
+        assertThat(boeing747.land()).isEqualTo("Not in flight");
+        boeing747.setMaxFlightAltitude(12000);
+        boeing747.setCurrentFlightAltitude(12000);
+        assertThat(boeing747.land()).isEqualTo("Landing procedure complete; flight ended");
+        assertThat(boeing747.getCurrentFlightAltitude()).isEqualTo(0);
+    }
+
+    // Testing setter method
+    @Test
+    public void canSetCurrentAndMaxFlightAltitude(){
+        boeing747.setMaxFlightAltitude(12000);
+        boeing747.setCurrentFlightAltitude(15000);
+        assertThat(boeing747.getCurrentFlightAltitude()).isEqualTo(12000);
+        boeing747.setMaxFlightAltitude(15000);
+        boeing747.setCurrentFlightAltitude(15000);
+        assertThat(boeing747.getCurrentFlightAltitude()).isEqualTo(15000);
+    }
+
 }
