@@ -45,6 +45,14 @@ public class AirborneTest {
         assertThat(boeing747.getWingCondition()).isEqualTo(100);
     }
 
+    @Test
+    public void canRepairWingsWithSpecifiedAmount(){
+        boeing747.repairWings(40);
+        assertThat(boeing747.getWingCondition()).isEqualTo(90);
+        boeing747.repairWings(20);
+        assertThat(boeing747.getWingCondition()).isEqualTo(100);
+    }
+
     // Testing interface methods
     @Test
     public void canTakeOff(){
