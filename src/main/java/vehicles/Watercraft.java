@@ -34,7 +34,19 @@ public class Watercraft extends Vehicle {
             currentDepth = desiredDepth;
         }
     }
+    
+    public void riseTowardsSurface(){
+        if (currentDepth < 0){
+            currentDepth = 0;
+        }
+    }
 
+    // OVERLOAD (riseTowardsSurface with argument to allow rising to a desired depth (subtly different from dive, which allows diving deeper down, compared to rise, which allows rising up towards the surface and no diving deeper)
+    public void riseTowardsSurface(int desiredDepth){
+        if ((underwaterTravel) && (currentDepth < desiredDepth)){
+            currentDepth = desiredDepth;
+        }
+    }
 
     public int getSafetyFlareCapacity(){
         return this.safetyFlareCapacity;
