@@ -1,5 +1,6 @@
 package exhibitions;
 
+import interfaces.ITakeOff;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import vehicles.*;
@@ -8,7 +9,7 @@ import static org.assertj.core.api.AssertionsForClassTypes.assertThat;
 
 public class AirshowTest {
 
-    private Airborne boeing747;
+    private ITakeOff boeing747;
     private Airshow airshow;
 
     @BeforeEach
